@@ -62,6 +62,10 @@ tf-diff plan.json --format=summary
 | No color coding | Red/green diff |
 | All attributes | Changed only + context |
 
+## More Tools
+
+See all dev tools: https://takawasi-social.com/en/
+
 ## License
 
 MIT
