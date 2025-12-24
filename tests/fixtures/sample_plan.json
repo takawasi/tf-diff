@@ -1,0 +1,50 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.5.0",
+  "resource_changes": [
+    {
+      "address": "aws_instance.web",
+      "type": "aws_instance",
+      "name": "web",
+      "change": {
+        "actions": ["update"],
+        "before": {
+          "ami": "ami-12345678",
+          "instance_type": "t2.micro",
+          "tags": {"Name": "web-server"}
+        },
+        "after": {
+          "ami": "ami-12345678",
+          "instance_type": "t2.small",
+          "tags": {"Name": "web-server"}
+        }
+      }
+    },
+    {
+      "address": "aws_s3_bucket.logs",
+      "type": "aws_s3_bucket",
+      "name": "logs",
+      "change": {
+        "actions": ["create"],
+        "before": null,
+        "after": {
+          "bucket": "my-logs-bucket",
+          "acl": "private"
+        }
+      }
+    },
+    {
+      "address": "aws_security_group.old",
+      "type": "aws_security_group",
+      "name": "old",
+      "change": {
+        "actions": ["delete"],
+        "before": {
+          "name": "old-sg",
+          "description": "Old security group"
+        },
+        "after": null
+      }
+    }
+  ]
+}

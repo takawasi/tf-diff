@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tf-diff"
+version = "0.1.0"
+description = "Git diff style output for Terraform plan"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "takawasi" }
+]
+keywords = ["terraform", "diff", "infrastructure", "iac", "cli"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "click>=8.0",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+
+[project.scripts]
+tf-diff = "tf_diff.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/takawasi/tf-diff"
+Repository = "https://github.com/takawasi/tf-diff"
+
+[tool.hatch.build.targets.wheel]
+packages = ["tf_diff"]
