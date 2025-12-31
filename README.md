@@ -1,5 +1,7 @@
 # tf-diff
 
+> **Documentation**: https://takawasi-social.com/tools/tf-diff/
+
 Git diff style output for Terraform plan.
 
 Stop scrolling through walls of text. See exactly what's changing.
